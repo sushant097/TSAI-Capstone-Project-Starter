@@ -83,7 +83,7 @@ class LitResnet(pl.LightningModule):
 
     def training_step(self, batch: Any, batch_idx: int):
         loss, preds, targets = self.step(batch)
-
+ 
         # update and log metrics
         self.train_loss(loss)
         self.train_acc(preds, targets)
